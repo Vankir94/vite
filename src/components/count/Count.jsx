@@ -1,10 +1,7 @@
-import {useState} from "react";
+import {useCount} from "./use-count.js";
 
 export function Count() {
-    const [value, setValue] = useState(0);
-
-    const increase = () => setValue(value + 1);
-    const decrease = () => setValue(value - 1);
+    const {value, increase, decrease} = useCount();
     return (
         <div>
             <button onClick={increase}>+</button>
