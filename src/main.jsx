@@ -1,8 +1,18 @@
-import { createRoot } from 'react-dom/client'
+import { createRoot } from 'react-dom/client';
+import MY_RESTAURANTS from './materials/mock.js';
 
 createRoot(document.getElementById('root')).render(
-    <ul>
-        {[1,2,3,4].map(el => <li>{el}</li>)}
-        <button onClick={console.log}>click</button>
-    </ul>
+    <div>
+            <h2>{MY_RESTAURANTS.name}</h2>
+
+            <h3>{MY_RESTAURANTS.menuName}</h3>
+            <ul>
+                    {MY_RESTAURANTS.listOfDishes.map(dish => <li>{dish}</li>)}
+            </ul>
+
+            <h3>{MY_RESTAURANTS.reviewName}</h3>
+            <ul>
+                    {MY_RESTAURANTS.listOfReviews.map(review => <li>{review}</li>)}
+            </ul>
+    </div>
 )
