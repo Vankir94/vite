@@ -1,5 +1,6 @@
 const MY_RESTAURANTS = [
     {
+        id: 1,
         name: 'Красти Краб',
         menuName: 'Меню_1',
         reviewName: 'Отзывы',
@@ -18,6 +19,7 @@ const MY_RESTAURANTS = [
         ]
     },
     {
+        id: 2,
         name: 'Красти Краб2',
         menuName: 'Меню_2',
         reviewName: 'Отзывы',

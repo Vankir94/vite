@@ -8,7 +8,7 @@ export const App = ({title}) => {
             <div>
                 <h1>{title}</h1>
                 {MY_RESTAURANTS.map((
-                    {name, menuName, listOfDishes, reviewName, listOfReviews}
+                    {name, menuName, listOfDishes, reviewName, listOfReviews, id}
                 ) => <Restaurant name={name}
                                  menuName={menuName}
                                  listOfDishes={listOfDishes}
