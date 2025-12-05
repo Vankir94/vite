@@ -1,12 +1,14 @@
 import {Layout} from "../layout/Layout";
-import {Tab} from "../tab/Tab";
+import {Tabs} from "../tabs/Tabs.jsx";
+import MY_RESTAURANTS from "../../materials/mock.js";
+import React from "react";
 
 export const App = ({title}) => {
     return (
         <Layout>
             <div>
                 <h1>{title}</h1>
-                <Tab />
+                <Tabs restaurants={MY_RESTAURANTS} />
             </div>
         </Layout>
     );

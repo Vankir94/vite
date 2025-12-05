@@ -5,7 +5,7 @@ export function Item({itemText , isCount}) {
     return (
         <>
             <li>{itemText}</li>
-            {isCount && <Count/>}
+            {isCount && <Count />}
         </>
     );
 };

@@ -11,7 +11,7 @@ export function List({listName, list, isCount}) {
                 <>
                     <h3>{listName}</h3>
                     <ul>
-                        {list.map(dish => <Item itemText={dish} isCount={isCount}/>)}
+                        {list.map((dish, i) => <Item key={i} itemText={dish} isCount={isCount} />)}
                     </ul>
                 </>
             )}
