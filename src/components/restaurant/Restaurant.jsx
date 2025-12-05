@@ -1,7 +1,7 @@
 import React from "react";
 import {List} from "../list/List.jsx";
 
-export function Restaurant({name, menuName, listOfDishes, reviewName, listOfReviews}) {
+export function Restaurant({name, menuName, listOfDishes, reviewName, listOfReviews, id}) {
     if (!name) {
         return null;
     }
