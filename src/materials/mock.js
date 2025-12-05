@@ -1,25 +1,34 @@
 const MY_RESTAURANTS = [
     {
+        id: 1,
         name: 'Красти Краб',
         menuName: 'Меню_1',
         reviewName: 'Отзывы',
         listOfDishes: [
             'блюдо 1',
+        ],
+        listOfReviews: [
+            'отзыв 1',
+        ]
+    },
+    {
+        id: 2,
+        name: 'Красти Краб2',
+        menuName: 'Меню_2',
+        reviewName: 'Отзывы',
+        listOfDishes: [
+            'блюдо 1',
             'блюдо 2',
-            'блюдо 3',
-            'блюдо 4',
-            'блюдо 5',
         ],
         listOfReviews: [
             'отзыв 1',
             'отзыв 2',
-            'отзыв 3',
-            'отзыв 4',
         ]
     },
     {
-        name: 'Красти Краб2',
-        menuName: 'Меню_2',
+        id: 3,
+        name: 'Красти Краб3',
+        menuName: 'Меню_3',
         reviewName: 'Отзывы',
         listOfDishes: [
             'блюдо 1',

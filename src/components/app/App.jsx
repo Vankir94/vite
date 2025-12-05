@@ -1,20 +1,14 @@
-import MY_RESTAURANTS from "../../materials/mock.js";
-import {Restaurant} from "../restaurant/Restaurant.jsx";
 import {Layout} from "../layout/Layout";
+import {Tabs} from "../tabs/Tabs.jsx";
+import MY_RESTAURANTS from "../../materials/mock.js";
+import React from "react";
 
 export const App = ({title}) => {
     return (
         <Layout>
             <div>
                 <h1>{title}</h1>
-                {MY_RESTAURANTS.map((
-                    {name, menuName, listOfDishes, reviewName, listOfReviews}
-                ) => <Restaurant name={name}
-                                 menuName={menuName}
-                                 listOfDishes={listOfDishes}
-                                 reviewName={reviewName}
-                                 listOfReviews={listOfReviews}/>)}
-
+                <Tabs restaurants={MY_RESTAURANTS} />
             </div>
         </Layout>
     );
