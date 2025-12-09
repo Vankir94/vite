@@ -8,10 +8,8 @@ export const App = ({title}) => {
     return (
         <IonApp>
             <Layout>
-                <div>
-                    <h1>{title}</h1>
-                    <Tabs restaurants={MY_RESTAURANTS} />
-                </div>
+                <h1>{title}</h1>
+                <Tabs restaurants={MY_RESTAURANTS} />
             </Layout>
         </IonApp>
     );

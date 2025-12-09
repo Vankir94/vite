@@ -1,5 +1,5 @@
 import React from "react";
-import MY_RESTAURANTS from "../../materials/mock.js";
+import { IonSegment, IonSegmentButton, IonLabel } from '@ionic/react';
 import {useActiveTab} from "./use-active-tab.js";
 import {Restaurant} from "../restaurant/Restaurant.jsx";
 
@@ -9,9 +9,13 @@ export function Tabs({restaurants}) {
 
     return (
         <div>
-            {restaurants.map(rest => (
-                <button onClick={() => handleTabClick(rest.id)}>{rest.name}</button>
-            ))}
+            <IonSegment value={activeTab.toString()} onIonChange={(e) => handleTabClick(e.detail.value)}>
+                {restaurants.map(rest => (
+                    <IonSegmentButton key={rest.id} value={rest.id.toString()}>
+                        <IonLabel>{rest.name}</IonLabel>
+                    </IonSegmentButton>
+                ))}
+            </IonSegment>
             {activeRestaurant && (
                 <Restaurant {...activeRestaurant} key={activeTab} />
             )}
