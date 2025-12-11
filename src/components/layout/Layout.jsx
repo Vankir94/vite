@@ -4,7 +4,6 @@ import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonProgressBar } 
 export function Layout({children}) {
     const [scrollProgress, setScrollProgress] = useState(0);
     const contentRef = useRef(null);
-    const timeoutRef = useRef(null);
 
     // Вынесенная функция для вычисления прогресса
     const calculateProgress = useCallback(async () => {
@@ -37,25 +36,7 @@ export function Layout({children}) {
     useEffect(() => {
         const content = contentRef.current;
         if (!content) return;
-
-        const initProgress = async () => {
-            await calculateProgress();
-        };
-
-        // Очищаем предыдущий таймер если есть
-        if (timeoutRef.current) {
-            clearTimeout(timeoutRef.current);
-        }
-
-        // Устанавливаем новый таймер
-        timeoutRef.current = setTimeout(initProgress, 100);
-
-        // Cleanup функция
-        return () => {
-            if (timeoutRef.current) {
-                clearTimeout(timeoutRef.current);
-            }
-        };
+        calculateProgress();
     }, [children, calculateProgress]);
 
     return (

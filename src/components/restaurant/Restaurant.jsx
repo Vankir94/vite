@@ -1,4 +1,3 @@
-import React from "react";
 import { IonCard, IonCardHeader, IonCardTitle, IonCardContent } from '@ionic/react';
 import {List} from "../list/List.jsx";
 import {ReviewForm} from "../review-form/ReviewForm.jsx";

@@ -2,7 +2,6 @@ import { IonApp } from '@ionic/react';
 import {Layout} from "../layout/Layout";
 import {Tabs} from "../tabs/Tabs.jsx";
 import MY_RESTAURANTS from "../../materials/mock.js";
-import React from "react";
 
 export const App = ({title}) => {
     return (

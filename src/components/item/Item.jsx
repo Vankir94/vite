@@ -1,4 +1,3 @@
-import React from "react";
 import {Count} from "../count/Count";
 
 export function Item({itemText , isCount}) {
