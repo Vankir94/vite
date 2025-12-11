@@ -1,5 +1,4 @@
 import {Item} from "../item/Item.jsx";
-import React from "react";
 
 export function List({listName, list, isCount}) {
     if (!listName) {

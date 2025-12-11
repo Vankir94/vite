@@ -1,4 +1,4 @@
-import React from "react";
+import { IonCard, IonCardHeader, IonCardTitle, IonCardContent } from '@ionic/react';
 import {List} from "../list/List.jsx";
 import {ReviewForm} from "../review-form/ReviewForm.jsx";
 
@@ -7,11 +7,15 @@ export function Restaurant({name, menuName, listOfDishes, reviewName, listOfRevi
         return null;
     }
     return (
-        <div>
-            <h2>{name}</h2>
-            <List listName={menuName} list={listOfDishes} isCount={true}/>
-            <List listName={reviewName} list={listOfReviews} isCount={false}/>
-            <ReviewForm />
-        </div>
+        <IonCard>
+            <IonCardHeader>
+                <IonCardTitle>{name}</IonCardTitle>
+            </IonCardHeader>
+            <IonCardContent>
+                <List listName={menuName} list={listOfDishes} isCount={true}/>
+                <List listName={reviewName} list={listOfReviews} isCount={false}/>
+                <ReviewForm />
+            </IonCardContent>
+        </IonCard>
     );
 };
