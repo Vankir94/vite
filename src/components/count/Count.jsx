@@ -5,6 +5,10 @@ export function Count() {
     const {value, increase, decrease} = useCount({minValue: 0, maxValue: 5});
 
     useEffect(() => {
+        increase()
+    }, [increase])
+
+    useEffect(() => {
         console.log(value);
         return () => console.log('unmount');
     }, [value])

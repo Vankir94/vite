@@ -15,7 +15,7 @@ export const useCount = ({minValue, maxValue}) => {
                     value: current.value + 1
                 };
             })
-        }, [value]
+        }, []
     ) ;
     const decrease = useCallback(
         () => {
@@ -29,7 +29,7 @@ export const useCount = ({minValue, maxValue}) => {
                     value: current.value - 1
                 };
             })
-        }, [value]
+        }, []
     );
 
     return {
