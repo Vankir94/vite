@@ -1,9 +1,11 @@
 import { useState, useRef, useEffect, useCallback } from 'react';
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonProgressBar } from '@ionic/react';
+import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonProgressBar, IonButton } from '@ionic/react';
+import { useThemeContext } from '../themeContext/use-theme-context.js';
 
 export function Layout({children}) {
     const [scrollProgress, setScrollProgress] = useState(0);
     const contentRef = useRef(null);
+    const {theme, toggleTheme} = useThemeContext();
 
     // Вынесенная функция для вычисления прогресса
     const calculateProgress = useCallback(async () => {
@@ -44,6 +46,9 @@ export function Layout({children}) {
             <IonHeader>
                 <IonToolbar>
                     <IonTitle>Restaurant App</IonTitle>
+                    <IonButton onClick={toggleTheme}>
+                        Тема: {theme}
+                    </IonButton>
                 </IonToolbar>
                 <IonProgressBar value={scrollProgress}></IonProgressBar>
             </IonHeader>
